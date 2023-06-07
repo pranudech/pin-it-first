@@ -72,7 +72,7 @@ $(document).ready(function () {
 
     // Set the tile layer. Could use Mapbox, OpenStreetMap, etc.
     // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18,
       zoomControl: false,
       minZoom: 3,
