@@ -72,11 +72,18 @@ $(document).ready(function () {
 
     // Set the tile layer. Could use Mapbox, OpenStreetMap, etc.
     // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   maxZoom: 18,
+    //   zoomControl: false,
+    //   minZoom: 3,
+    //   noWrap: true
+    // }).addTo(map);
+    L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
       maxZoom: 18,
       zoomControl: false,
       minZoom: 3,
-      noWrap: true
+      noWrap: true,
+      fullscreenControl: true,
+      subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
     }).addTo(map);
 
     // Hide the default zoom control. I want a custom one!
@@ -84,6 +91,7 @@ $(document).ready(function () {
 
     // No idea why but Leaflet seems to place default markers on startup...
     $("img[src='https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png']").remove();
+    
   }
 
   // Hints for drawing lines or polygons
